@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fj.consul.dao.PmsDao">
+
+    <select id="find" resultType="com.fj.consul.entity.Pms" parameterType="int" >
+        select * from pms where id=#{id};
+    </select>
+    
+    <insert id="insert"  parameterType="com.fj.consul.entity.Pms">
+        insert into pms  (id,name,des) values (#{id},#{name},#{des});
+    </insert>
+</mapper>
